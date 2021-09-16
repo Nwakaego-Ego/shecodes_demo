@@ -52,11 +52,15 @@ ul {
 }
 
 .country {
-  /* font-weight: 600; */
+  margin-left: 10px;
   color: #481a0e;
-  /* font-size: 27px; */
-  margin: 10px;
+  color: red;
 }
+
+/* .lagos-nigeria {
+  margin-left: 20px;
+  color: #481a0e;
+}  */
 
 .saturday {
   color: #481a0e;
