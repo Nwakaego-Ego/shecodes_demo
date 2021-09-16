@@ -87,12 +87,6 @@ a {
   text-decoration: none;
 }
 
-.row {
-  margin: 0;
-  width: 500px;
-  height: 100px;
-}
-
 .col-shower {
   height: 170px;
   width: 700px;
@@ -116,48 +110,12 @@ ul {
   margin-top: 10px;
 }
 
-.week {
-  font-weight: 600;
-  color: #481a0e;
-  font-size: 20px;
-  text-decoration: none;
-  list-style: none;
-  margin: 10px;
-  line-height: 10px;
-}
-
 .section {
   margin-top: 20px;
 }
 
-.row-3 {
-  font-size: 20px;
-  font-weight: 600;
-
-  color: #481a0e;
-  justify-content: space-around;
-  width: 22vw;
-}
-
-.row-1,
-.row-2,
-.row-3 {
-  padding-left: 0;
-  margin: 5px;
-}
-
 img {
   width: 70px;
-  margin: 5px;
-}
-
-#row {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding-left: 0;
-  width: 300px;
-  height: 40px;
   margin: 5px;
 }
 
@@ -166,45 +124,10 @@ li {
   margin: 0;
 }
 
-.row-1 {
-  width: 150px;
-}
-
-.row-2 {
-  font-size: 30px;
-  color: #481a0e;
-  justify-content: space-around;
-}
-
 .number {
   font-weight: 500;
   color: #481a0e;
   font-size: 20px;
-}
-
-p,
-.umbrella-icon {
-  color: #481a0e;
-  margin-left: 48%;
-}
-
-p {
-  margin: 9px;
-}
-
-.rain-fall {
-  font-size: 150px;
-  margin-top: 10px;
-  color: #481a0e;
-  /* font-weight: 0; */
-}
-
-.umbrella {
-  display: flex;
-}
-
-.umbrella-icon {
-  font-size: 30px;
 }
 
 .source-div {
