@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Weather Project</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shecodes Git</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6ba15016e0.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <h1>She codes git task</h1>
+    <div class="container">
+      <form>
+        <input
+          id="city-search"
+          class="city-search"
+          type="text"
+          placeholder="Enter City Search...."
+          autocomplete="off"
+        />
+        <input class="search" type="submit" value="Search" />
+        <input
+          id="current-location"
+          class="search"
+          type="submit"
+          value="Current"
+        />
+      </form>
+      <div id="lagos-nigeria" class="country"></div>
+      <div id="saturday" class="saturday">Saturday 43:39</div>
+      <br />
+      <div id="description" class="showery"></div>
+      <div class="row">
+        <div class="col-6">
+          <div class="float">
+            <span id="nineteen" class="nineteen"></span>
+            <a id="cels" class="unit" href="#">°C</a>
+            <span class="unit">|</span>
+            <a id="fal" class="unit" href="#">°F</a>
+          </div>
+        </div>
+        <div class="col-6 col-humidity showers">
+          <ul>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <ul id="row" class="row-1">
+          <li class="week">Mon</li>
+          <li class="week">Tue</li>
+          <li class="week">Wed</li>
+          <li class="week">Thur</li>
+          <li class="week">Fri</li>
+        </ul>
+        <ul id="row" class="row-2">
+          <li><i class="fas fa-cloud-rain font-rain"></i></li>
+          <li><i class="fas fa-cloud-sun-rain font-rain"></i></li>
+          <li><i class="fas fa-cloud-moon-rain font-rain"></i></li>
+          <li><i class="fas fa-cloud-rain font-rain"></i></li>
+          <li><i class="fas fa-cloud-rain font-rain"></i></li>
+        </ul>
+        <ul id="row" class="row-3">
+          <li>27&#176;</li>
+          <li>23&#176;</li>
+          <li>26&#176;</li>
+          <li>28&#176;</li>
+          <li>22&#176;</li>
+        </ul>
+      </div>
+      <div class="umbrella">
+        <i class="fas fa-umbrella umbrella-icon"></i>
+        <p>Make your umbrella your wallet.......</p>
+      </div>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
