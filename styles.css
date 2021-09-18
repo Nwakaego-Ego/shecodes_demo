@@ -52,9 +52,8 @@ ul {
 }
 
 .country {
-  margin-left: 10px;
+  margin-left: 15px;
   color: #481a0e;
-  color: red;
 }
 
 /* .lagos-nigeria {
@@ -96,12 +95,17 @@ a {
   width: 700px;
 }
 
+/* .col-6 {
+  flex: 0 0 auto;
+  width: 40%;
+} */
+
 ul {
   list-style: none;
 }
 
 .col-humidity {
-  width: 150px;
+  width: 200px;
   height: 30px;
   text-decoration: none;
 }
