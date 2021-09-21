@@ -1,26 +1,54 @@
-let newTime = new Date();
-let day = newTime.getDay();
-let minutes = newTime.getMinutes();
-if (minutes < 10) minutes = `0${minutes}`;
-let seconds = newTime.getSeconds();
-let hour = newTime.getHours();
-// if (hour < 10) {
-//   let hour = `0${hour}`;
-// }
+// let newTime = new Date();
+// let day = newTime.getDay();
+// let minutes = newTime.getMinutes();
+// if (minutes < 10) minutes = `0${minutes}`;
+// let seconds = newTime.getSeconds();
+// let hour = newTime.getHours();
+// // if (hour < 10) {
+// //   let hour = `0${hour}`;
+// // }
 
-let weeks = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednessday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let week = weeks[newTime.getDay()];
+// let weeks = [
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednessday",
+//   "Thursday",
+//   "Friday",
+//   "Saturday",
+// ];
+// let week = weeks[newTime.getDay()];
 
-let currentTime = document.querySelector("#saturday");
-currentTime.innerHTML = `${week} ${hour}:${minutes}`;
+// let currentTime = document.querySelector("#saturday");
+// currentTime.innerHTML = `${week} ${hour}:${minutes}`;
+
+function currentDate(timestamp) {
+  let time = new Date(timestamp);
+  let day = time.getDay();
+  let weeks = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednessday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let week = weeks[day()];
+
+  let minutes = time.getMinutes();
+  let hour = time.getHours();
+  if (hour < 10) {
+    let hour = `0${hour}`;
+  }
+  let seconds = timestamp.getSeconds();
+
+  return `${week} ${hour}:${minutes}`;
+}
+
+let currentTime = document.querySelector("#time");
+currentTime.innerHTML = currentDate(response.data.dt * 1000);
 
 function revealWeather(response) {
   console.log(response.data);
@@ -58,6 +86,8 @@ function celliousButton() {
 
 let celsious = document.querySelector("#cels");
 celsious.addEventListener("click", celliousButton);
+
+search("Nigeria");
 
 // function searchLocation(position) {
 //   console.log(position);
@@ -101,7 +131,5 @@ celsious.addEventListener("click", celliousButton);
 
 // let farenheit = document.querySelector("#fal");
 // farenheit.addEventListener("click", farenheitButton);
-
-search("Nigeria");
 
 // https:api.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&appid&49d8a1330406cb9ac92bd472b6ff3770&units=metric
