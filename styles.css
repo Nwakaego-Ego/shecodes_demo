@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   background-color: #481a0e;
+  /* background-color: #202124; */
 }
 
 .container {
@@ -54,6 +55,9 @@ ul {
 .country {
   margin-left: 15px;
   color: #481a0e;
+  text-transform: capitalize;
+  font-size: 22px;
+  line-height: 26px;
 }
 
 /* .lagos-nigeria {
@@ -61,21 +65,28 @@ ul {
   color: #481a0e;
 }  */
 
-.saturday {
+.day {
   color: #481a0e;
   margin-left: 15px;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 20px;
 }
 
-.nineteen {
+.temperature {
   font-size: 50px;
   margin-left: 40%;
   color: #481a0e;
   font-weight: 300;
+  text-transform: capitalize;
 }
 
-.showery {
+.description {
   color: #481a0e;
   margin-left: 15px;
+  text-transform: capitalize;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .unit {
