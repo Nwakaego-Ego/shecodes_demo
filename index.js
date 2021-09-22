@@ -24,7 +24,11 @@
 
 function currentDate(timestamp) {
   let time = new Date(timestamp);
-  let day = time.getDay();
+  let minutes = time.getMinutes();
+  let hour = time.getHours();
+  // if (hour < 10) {
+  //   let hour = `0${hour}`;
+  // }
   let weeks = [
     "Sunday",
     "Monday",
@@ -35,25 +39,17 @@ function currentDate(timestamp) {
     "Saturday",
   ];
 
-  let week = weeks[day()];
+  let week = weeks[time.getDay()];
 
-  let minutes = time.getMinutes();
-  let hour = time.getHours();
-  if (hour < 10) {
-    let hour = `0${hour}`;
-  }
-  let seconds = timestamp.getSeconds();
+  let seconds = time.getSeconds();
 
   return `${week} ${hour}:${minutes}`;
 }
 
-let currentTime = document.querySelector("#time");
-currentTime.innerHTML = currentDate(response.data.dt * 1000);
-
 function revealWeather(response) {
   console.log(response.data);
   document.querySelector("#lagos-nigeria").innerHTML = response.data.name;
-  document.querySelector("#nineteen").innerHTML = Math.round(
+  document.querySelector("#time").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
@@ -62,6 +58,11 @@ function revealWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  let currentDay = document.querySelector("#day");
+  currentDay.innerHTML = currentDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  // iconElement.setAttribute("i", "https://openweathermap.org/img/wn/10d@2x.png");
+  iconElement.innerHTML = `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`;
 }
 
 function search(city) {
@@ -80,7 +81,7 @@ let formSearch = document.querySelector("form");
 formSearch.addEventListener("submit", handleSubmit);
 
 function celliousButton() {
-  let oneNine = document.querySelector("#nineteen");
+  let oneNine = document.querySelector("#time");
   oneNine.innerHTML = 19;
 }
 

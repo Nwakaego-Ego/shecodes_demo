@@ -65,12 +65,16 @@ ul {
 }
 
 .day {
-  color: #481a0e;
+  color: red;
   margin-left: 15px;
   text-transform: capitalize;
   font-size: 16px;
   line-height: 20px;
 }
+
+/* .section-1 {
+  font-size: 16px;
+} */
 
 .temperature {
   font-size: 50px;
